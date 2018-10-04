@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14313.18" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NoH-f3-wqQ">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14238.10"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="y5f-wz-pWL">
+            <objects>
+                <controller id="NoH-f3-wqQ" customClass="InterfaceController" customModule="CoreMLTest_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="0.20000000000000001" alignment="left" id="ZSc-gf-5zD">
+                            <items>
+                                <button width="0.5" height="1" alignment="left" title="Reset" id="cWF-ux-AK4">
+                                    <connections>
+                                        <action selector="didReset" destination="NoH-f3-wqQ" id="QrV-25-FDM"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" height="1" alignment="left" title="Next" id="ZnT-tW-jWj">
+                                    <connections>
+                                        <action selector="didTapNext" destination="NoH-f3-wqQ" id="Omh-bd-F9Q"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <label width="1" alignment="left" text="Sample 1-100" textAlignment="center" id="38s-GI-NaR"/>
+                        <label width="1" alignment="left" text="Predictions: ...." textAlignment="left" numberOfLines="0" id="0r8-j9-ft2"/>
+                    </items>
+                    <connections>
+                        <outlet property="predictionLabel" destination="0r8-j9-ft2" id="w1j-aP-MaV"/>
+                        <outlet property="sampleLabel" destination="38s-GI-NaR" id="F6A-hZ-KZc"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-505" y="993"/>
+        </scene>
+    </scenes>
+</document>
